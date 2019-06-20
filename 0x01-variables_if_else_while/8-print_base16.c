@@ -12,7 +12,7 @@ int main(void)
 	int s = sizeof(hex) / sizeof(hex[0]);
 
 	for (c = 0; c < s; c++)
-		putchar(hex[c]);
+		putchar((char)hex[c]);
 
 	putchar('\n');
 	return (0);
