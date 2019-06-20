@@ -5,14 +5,11 @@
  */
 int main(void)
 {
-	char alphabet[] = "abcdefghijklmnopqrstuvwxyz";
-
 	int c;
 
-	int s = sizeof(alphabet) / sizeof(alphabet[0]);
+	for (c = 122; c > 96; c--)
+		putchar(c);
 
-	for (c = s - 1; c > -1; c--)
-		putchar(alphabet[c]);
-
+	putchar('\n');
 	return (0);
 }
