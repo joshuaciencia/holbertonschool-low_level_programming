@@ -14,6 +14,5 @@ int main(void)
 	for (c = s - 1; c > -1; c--)
 		putchar(alphabet[c]);
 
-	putchar('\n');
 	return (0);
 }
