@@ -5,14 +5,13 @@
  */
 int main(void)
 {
-	char alphabets[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-
 	int c;
 
-	int size = sizeof(alphabets) / sizeof(alphabets[0]);
+	for (c = 97; c < 123; c++)
+		putchar(c);
 
-	for (c = 0; c < size; c++)
-		putchar((char)alphabets[c]);
+	for (c = 65; c < 91; c++)
+		putchar(c);
 
 	putchar('\n');
 	return (0);
