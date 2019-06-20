@@ -5,14 +5,14 @@
  */
 int main(void)
 {
-	char alphabet[] = "abcdefghijklmnopqrstuvwxyz";
-
 	int c;
 
-	int s = sizeof(alphabet) / sizeof(alphabet[0]);
+	char hex[] = "0123456789abcdef";
 
-	for (c = s - 1; c > -1; c--)
-		putchar(alphabet[c]);
+	int s = sizeof(hex) / sizeof(hex[0]);
+
+	for (c = 0; c < s; c++)
+		putchar(hex[c]);
 
 	putchar('\n');
 	return (0);
