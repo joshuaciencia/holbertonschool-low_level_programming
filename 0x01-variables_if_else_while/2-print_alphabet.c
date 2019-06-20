@@ -5,10 +5,18 @@
  */
 int main(void)
 {
-	char c;
+	char alph[] = "abcdefghijklmnopqrstuvwxyz";
 
-	for (c = 'a'; c < 'z'; c++)
-		putchar(c);
+	int c;
+
+	int s = sizeof(alph) / sizeof(alph[0]);
+
+	for (c = 0; c < s; c++)
+	{
+		int ch = alph[c];
+
+		putchar(ch);
+	}
 	putchar('\n');
 	return (0);
 }
