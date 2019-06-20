@@ -12,6 +12,6 @@ int main(void)
 	for (c = 0; c < sizeof(alphabet) / sizeof(alphabet[0]); c++)
 		putchar(alphabet[c]);
 
-	
+	putchar('\n');
 	return (0);
 }
