@@ -5,13 +5,10 @@
  */
 int main(void)
 {
-	char alphabet[] = "abcdefghijklmnopqrstuvwxyz";
+	char c;
 
-	unsigned int c;
-
-	for (c = 0; c < sizeof(alphabet) / sizeof(alphabet[0]); c++)
-		putchar(alphabet[c]);
-
+	for (c = 'a'; c < 'z'; c++)
+		putchar(c);
 	putchar('\n');
 	return (0);
 }
