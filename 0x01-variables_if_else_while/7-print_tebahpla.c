@@ -1,7 +1,19 @@
 #include <stdio.h>
-int main()
+/**
+ * main - print alphabet
+ * Return: 0
+ */
+int main(void)
 {
-   // printf() displays the string inside quotation
-   printf("Hello, World!");
-   return 0;
+	char alphabet[] = "abcdefghijklmnopqrstuvwxyz";
+
+	int c;
+
+	int s = sizeof(alphabet) / sizeof(alphabet[0]);
+
+	for (c = s - 1; c > -1; c--)
+		putchar(alphabet[c]);
+
+	putchar('\n');
+	return (0);
 }

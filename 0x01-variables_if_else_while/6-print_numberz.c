@@ -1,7 +1,14 @@
 #include <stdio.h>
-int main()
+/**
+ * main - print alphabet
+ * Return: 0
+ */
+int main(void)
 {
-   // printf() displays the string inside quotation
-   printf("Hello, World!");
-   return 0;
+	int c;
+
+	for (c = 0; c < 10; c++)
+		putchar(c + '0');
+	putchar('\n');
+	return (0);
 }
