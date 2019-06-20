@@ -5,15 +5,14 @@
  */
 int main(void)
 {
-	char alphabet[] = "abcdefghijklmnopqrstuvwxyz";
 
-	unsigned int c;
+	int c;
 
-	for (c = 0; c < sizeof(alphabet) / sizeof(alphabet[0]); c++)
+	for (c = 97; c < 123; c++)
 	{
-		if (c == 4 || c == 16)
+		if (c == 101 || c == 113)
 			continue;
-		putchar((char)alphabet[c]);
+		putchar(c);
 	}
 
 	putchar('\n');
