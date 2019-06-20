@@ -7,7 +7,7 @@ int main(void)
 {
 	int c;
 
-	for (c = 0; c < 99; c++)
+	for (c = 0; c < 100; c++)
 	{
 		int last = c % 10;
 
@@ -16,7 +16,7 @@ int main(void)
 		putchar((48 + first));
 		putchar((48 + last));
 
-		if (c == 98)
+		if (c == 99)
 			continue;
 
 		putchar(44);
