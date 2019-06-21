@@ -28,7 +28,8 @@ int main(void)
 			putchar(' ');
 			putchar((48 + f2));
 			putchar((48 + s2));
-
+			if (i == 98 && j == 99)
+				continue;
 			putchar(44);
 			putchar(' ');
 
