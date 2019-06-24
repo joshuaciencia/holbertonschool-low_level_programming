@@ -5,7 +5,7 @@
  */
 int main(void)
 {
-	int r = _isalpha('Z');
+	int r = _isalpha('z');
 
 	if (r == 1)
 		_putchar('y');
