@@ -10,17 +10,17 @@ int print_sign(int c)
 
 	if (c > 0)
 	{
-		_putchar('+');
+		_putchar(43);
 		r = 1;
 	}
 	else if (c == 0)
 	{
-		_putchar('0');
+		_putchar(48);
 		r = 0;
 	}
 	else
 	{
-		_putchar('-');
+		_putchar(45);
 		r = -1;
 	}
 	_putchar('\n');
