@@ -6,20 +6,32 @@
  */
 int main(void)
 {
-	int last = f(3);
+	f(50);
 
 	return (0);
 }
 
-int f(int n)
+void f(int n)
 {
-	if (n < 2)
+	long n1 = 0;
+
+	long n2 = 1;
+
+	int i;
+
+	printf("%ld, ", n1);
+
+	for (i = 0; i < n - 1; i++)
 	{
-		printf("%d, ", n);
-		return (n);
-	} else
-	{
-		printf("%d, ", n);
-		return (f(n - 1) +  f(n - 2));
+
+		if (i == n - 2)
+			printf("%ld", n2);
+		else
+			printf("%ld, ", n2);
+		long n3 = n1 + n2;
+
+		n1 = n2;
+		n2 = n3;
 	}
+	printf("\n");
 }
