@@ -1,9 +1,4 @@
 #include "holberton.h"
-
-int main(void){
-	
-	return (0);
-}
 /**
  * _islower - checks for lowercase letters
  * Return: void
