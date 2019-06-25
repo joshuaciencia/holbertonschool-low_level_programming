@@ -26,17 +26,17 @@ void print_times_table(int t)
 			{
 				if (j != 0)
 				{
-					_putchar(' ');
-					_putchar(' ');
+					put_spaces(3);
 				}
 				_putchar(48 + n);
 			} else if (n < 100)
 			{
-				_putchar(' ');
+				put_spaces(2);
 				_putchar(48 + n2);
 				_putchar(48 + n3);
 			} else if (n < 1000)
 			{
+				_putchar(' ');
 				_putchar(48 + n1);
 				_putchar(48 + n2);
 				_putchar(48 + n3);
@@ -46,4 +46,15 @@ void print_times_table(int t)
 		}
 		_putchar('\n');
 	}
+}
+/**
+ * put_spaces - Prints n spaces
+ * @n: the amount of spaces
+ */
+void put_spaces(int n)
+{
+	int i;
+
+	for (i = 0; i < n; i++)
+		_putchar(' ');
 }
