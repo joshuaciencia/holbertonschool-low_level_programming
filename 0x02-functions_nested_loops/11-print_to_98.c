@@ -6,7 +6,7 @@
  */
 int main(void)
 {
-	print_to_98(0);
+	print_to_98(5);
 	_putchar('\n');
 	return (0);
 }
@@ -28,17 +28,19 @@ void print_to_98(int n)
 
 		int j;
 
+		if (i > 98)
+			i--;
+		else
+			i++;
+
 		while (true)
 		{
-			if (whole < 2)
+			if (whole < 1)
 				break;
 			whole = whole / 10;
 			digits++;
 		}
 
-
-		/*_putchar(48 + digits);*/
-		/*_putchar(' ');*/
 		for (j = 0; j < digits; j++)
 		{
 
@@ -46,20 +48,18 @@ void print_to_98(int n)
 
 			int c;
 
-			for (c = 0; c < digits; c++)
+			for (c = 0; c < digits - 1; c++)
 			{
 				pow = pow * 10;
 			}
 
-			_putchar(48 + ((i / pow) % 10));
+			_putchar(48 + (i / pow) % 10);
+		}		
+		
+		if (i != 98)
+		{
+			_putchar(44);
+			_putchar(' ');
 		}
-
-		_putchar(44);
-		_putchar(' ');
-
-		if (i > 98)
-			i--;
-		else
-			i++;
 	}
 }

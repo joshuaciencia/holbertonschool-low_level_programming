@@ -9,7 +9,7 @@ int main(void)
 
 	int i;
 
-	int s = sizeof(hol) / sizeof(hol[0]);
+	int s = sizeof(hol);
 
 	for (i = 0; i < s; i++)
 		_putchar(hol[i]);
