@@ -6,7 +6,7 @@
  */
 int main(void)
 {
-	int last = f(50);
+	int last = f(3);
 
 	return (0);
 }

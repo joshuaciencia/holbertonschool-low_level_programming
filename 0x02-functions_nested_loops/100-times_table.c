@@ -6,14 +6,10 @@
  */
 void print_times_table(int t)
 {
-
-	int i;
-
-	int j;
+	int i, j;
 
 	if (t > 15 || t < 0)
 		return;
-
 	for (i = 0; i <= t; i++)
 	{
 		for (j = 0; j <= t; j++)
@@ -33,22 +29,20 @@ void print_times_table(int t)
 					_putchar(' ');
 					_putchar(' ');
 				}
-					_putchar(48 + n);
+				_putchar(48 + n);
 			} else if (n < 100)
 			{
 				_putchar(' ');
 				_putchar(48 + n1);
 				_putchar(48 + n2);
-			}else if (n < 1000)
+			} else if (n < 1000)
 			{
 				_putchar(48 + n1);
 				_putchar(48 + n2);
 				_putchar(48 + n3);
 			}
-
 			if (j != t)
 				_putchar(',');
-
 		}
 		_putchar('\n');
 	}
