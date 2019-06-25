@@ -23,6 +23,5 @@ int print_sign(int c)
 		_putchar(45);
 		r = -1;
 	}
-	_putchar('\n');
 	return (r);
 }
