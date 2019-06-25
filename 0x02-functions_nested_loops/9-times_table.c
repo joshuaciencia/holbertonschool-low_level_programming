@@ -1,14 +1,5 @@
 #include "holberton.h"
 /**
- * main - test
- * Return: 0
- */
-int main(void)
-{
-	times_table();
-	return (0);
-}
-/**
  * times_table - prints all minutes
  * Return: void
  */

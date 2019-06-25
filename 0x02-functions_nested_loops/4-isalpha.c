@@ -1,19 +1,5 @@
 #include "holberton.h"
 /**
- * main - test
- * Return: 0
- */
-int main(void)
-{
-	int r = _isalpha('z');
-
-	if (r == 1)
-		_putchar('y');
-
-	_putchar('\n');
-	return (0);
-}
-/**
  * _isalpha - checks for alpha letters
  * Return: void
  * @c: ascii code to be checked
@@ -24,6 +10,6 @@ int _isalpha(int c)
 	{
 		return (1);
 	}
-
+	_putchar('\n');
 	return (0);
 }

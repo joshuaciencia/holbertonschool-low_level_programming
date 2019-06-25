@@ -1,14 +1,5 @@
 #include "holberton.h"
 /**
- * main - test
- * Return: 0
- */
-int main(void)
-{
-	jack_bauer();
-	return (0);
-}
-/**
  * jack_bauer - prints all minutes
  * Return: void
  */
@@ -38,4 +29,5 @@ void jack_bauer(void)
 			_putchar('\n');
 		}
 	}
+	_putchar('\n');
 }
