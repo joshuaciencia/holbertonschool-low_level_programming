@@ -1,15 +1,5 @@
 #include "holberton.h"
 /**
- * main - print alphabet
- * Return: 0
- */
-int main(void)
-{
-	print_alphabet();
-	return (0);
-}
-
-/**
  * print_alphabet - prints alphabet
  * Return: the result of the adition
  */
