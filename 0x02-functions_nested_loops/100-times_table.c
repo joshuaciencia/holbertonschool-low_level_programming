@@ -1,18 +1,22 @@
 #include "holberton.h"
 /**
- * times_table - prints all minutes
+ * print_times_table - prints all minutes
  * Return: void
  * @t: times to print the table
  */
 void print_times_table(int t)
 {
+
 	int i;
 
 	int j;
 
-	for (i = 0; i < 10; i++)
+	if (t > 15 || t < 0)
+		return;
+
+	for (i = 0; i <= t; i++)
 	{
-		for (j = 0; j < 10; j++)
+		for (j = 0; j <= t; j++)
 		{
 			int n = j * i;
 
@@ -35,7 +39,7 @@ void print_times_table(int t)
 				_putchar(48 + n2);
 			}
 
-			if (j != 9)
+			if (j != t)
 				_putchar(44);
 
 		}
