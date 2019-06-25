@@ -33,8 +33,8 @@ void print_times_table(int t)
 			} else if (n < 100)
 			{
 				_putchar(' ');
-				_putchar(48 + n1);
 				_putchar(48 + n2);
+				_putchar(48 + n3);
 			} else if (n < 1000)
 			{
 				_putchar(48 + n1);
