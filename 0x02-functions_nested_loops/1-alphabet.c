@@ -10,6 +10,10 @@ int main(void)
 	return (0);
 }
 
+/**
+ * print_alphabet - prints alphabet
+ * Return: the result of the adition
+ */
 void print_alphabet(void)
 {
 	int i;
