@@ -12,9 +12,9 @@ int main(void)
 
 void f(int n)
 {
-	unsigned long long n1 = 0;
+	unsigned long long n1 = 1;
 
-	unsigned long long n2 = 1;
+	unsigned long long n2 = 2;
 
 	int i;
 
