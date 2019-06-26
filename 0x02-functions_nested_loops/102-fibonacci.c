@@ -19,7 +19,7 @@ void f(int n)
 	int i;
 
 	printf("%llu, ", n1);
-	printf("%llu\n", n2);
+	printf("%llu,\n", n2);
 
 	for (i = 0; i < n - 2; i++)
 	{
