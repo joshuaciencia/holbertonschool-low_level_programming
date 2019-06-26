@@ -10,6 +10,10 @@ int main(void)
 	return (0);
 }
 
+/**
+ * f - first 50 fibonacci numbers
+ * @n: n fibonacci numbers
+ */
 void f(int n)
 {
 	unsigned long n1 = 1;
