@@ -5,7 +5,7 @@
  */
 void print_number(int n)
 {
-	int size = n;
+	unsigned int size = n;
 
 	int digits = 0;
 
@@ -25,7 +25,7 @@ void print_number(int n)
 	for (i = 0; i < digits; i++)
 	{
 
-		int pow = 1;
+		unsigned int pow = 1;
 
 		int j;
 
