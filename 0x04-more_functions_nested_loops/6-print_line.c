@@ -1,7 +1,7 @@
 #include "holberton.h"
 /**
  * print_line - print straigh line
- * @n - number of time _ is printed
+ * @n: number of time _ is printed
  * Return: void
  */
 void print_line(int n)
