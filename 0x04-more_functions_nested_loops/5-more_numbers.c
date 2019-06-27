@@ -15,16 +15,33 @@ void more_numbers(void)
 		{
 			if (j > 9)
 			{
-				int n1 = j / 10;
-
-				int n2 = j % 10;
-
-				_putchar(48 + n1);
-				_putchar(48 + n2);
+				print_two_digits(j);
 			}
 			else
 				_putchar(48 + j);
 		}
 		_putchar('\n');
+	}
+}
+/**
+ * print_two_digits - prints two digits
+ * @n: number
+ */
+void print_two_digits(int n)
+{
+	int i;
+
+	for (i = 0; i < 2; i++)
+	{
+
+		int dig;
+
+		if (i == 0)
+			dig = n / 10;
+		else
+			dig = n % 10;
+
+		_putchar(48 + dig);
+
 	}
 }
