@@ -5,14 +5,14 @@
  */
 void print_number(int n)
 {
-	int size = n;
+	unsigned int size = n;
 
 	int digits = 0;
 
 	int i;
 
 	if (n < 0)
-		size = -size;
+		size = -n;
 	if (n == 0)
 		digits = 1;
 
