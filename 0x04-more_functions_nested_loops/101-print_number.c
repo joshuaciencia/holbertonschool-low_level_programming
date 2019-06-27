@@ -1,23 +1,25 @@
 #include "holberton.h"
-#include <math.h>
-#include <stdio.h>
 /**
- * print_diagonal - print diagonal line
+ * print_number - print diagonal line
  * @n: number of time back slash is printed
  */
 void print_number(int n)
 {
-
 	int size = n;
 
 	int digits = 0;
 
 	int i;
 
+	if (n < 0)
+		size = -size;
+	if (n == 0)
+		digits = 1;
+
 	while (size >= 1)
 	{
 		size = size / 10;
-		digits ++;
+		digits++;
 	}
 
 	for (i = 0; i < digits; i++)
@@ -35,13 +37,12 @@ void print_number(int n)
 		}
 
 		d = ((n / pow) % 10);
-		printf("%d\n", d);
 		if (n < 0)
 		{
 			d = -d;
 			if (i == 0)
 				_putchar(45);
 		}
-		/*_putchar(48 + ((n / pow) % 10));*/
+		_putchar(48 + d);
 	}
 }
