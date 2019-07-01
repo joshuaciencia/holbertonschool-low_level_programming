@@ -7,31 +7,35 @@
 int main(void)
 {
 	f(50);
-
 	return (0);
 }
 
+/**
+ * f - first 50 fibonacci numbers
+ * @n: n fibonacci numbers
+ */
 void f(int n)
 {
-	long n1 = 0;
+	unsigned long n1 = 1;
 
-	long n2 = 1;
+	unsigned long n2 = 2;
 
 	int i;
 
-	printf("%ld, ", n1);
+	printf("%lu, ", n1);
+	printf("%lu, ", n2);
 
-	for (i = 0; i < n - 1; i++)
+	for (i = 0; i < n - 2; i++)
 	{
-
-		if (i == n - 2)
-			printf("%ld", n2);
-		else
-			printf("%ld, ", n2);
-		long n3 = n1 + n2;
+		unsigned long n3 = n1 + n2;
 
 		n1 = n2;
 		n2 = n3;
+
+		if (i == n - 3)
+			printf("%lu", n2);
+		else
+			printf("%lu, ", n2);
 	}
 	printf("\n");
 }
