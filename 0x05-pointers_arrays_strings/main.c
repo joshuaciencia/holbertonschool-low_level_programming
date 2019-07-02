@@ -2,13 +2,11 @@
 #include "holberton.h"
 
 int main(void){
-        int array[5];
+    char s1[98];
+    char *p;
 
-    array[0] = 98;
-    array[1] = 402;
-    array[2] = -198;
-    array[3] = 298;
-    array[4] = -1024;
-    print_array(array, 5);
+    p = _strcpy(s1, "First, solve the problem. Then, write the code\n");
+    printf("%s", s1);
+    printf("%s", p);
     return (0);
 }
