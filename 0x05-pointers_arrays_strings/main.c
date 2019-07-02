@@ -2,7 +2,7 @@
 #include "holberton.h"
 
 int main(void){
-    char s[] = "Holberton";
+    char s[9] = "Holberto";
 
     printf("%s\n", s);
     rev_string(s);

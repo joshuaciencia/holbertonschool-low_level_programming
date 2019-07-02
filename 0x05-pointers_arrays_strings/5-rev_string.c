@@ -15,7 +15,7 @@ void rev_string(char *s)
 		c++;
 	}
 
-	while (c2 != c - 1)
+	while (c2 <= c - 1)
 	{
 		char t1 = s[c2];
 
@@ -25,6 +25,7 @@ void rev_string(char *s)
 		s[c - 1] = t1;
 		c2++;
 		c--;
+
 	}
 
 }
