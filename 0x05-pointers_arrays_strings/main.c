@@ -2,12 +2,10 @@
 #include "holberton.h"
 
 int main(void){
-	char *str;
+    char s[10] = "camisa";
 
-    int len;
-
-    str = "Holberton!";
-    len = _strlen(str);
-    printf("%d\n", len);
+    printf("%s\n", s);
+    rev_string(s);
+    printf("%s\n", s);
     return (0);
 }

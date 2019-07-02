@@ -1,6 +1,4 @@
 #include "holberton.h"
-#include <string.h>
-#include <stdio.h>
 /**
  * _strlen - len of string
  * Return: length of string
@@ -8,6 +6,12 @@
  */
 int _strlen(char *s)
 {
-	printf("%s", *s);
-	return (0);
+	int counter = 0;
+
+	while (s[counter] != 0)
+	{
+		counter++;
+	}
+
+	return (counter);
 }
