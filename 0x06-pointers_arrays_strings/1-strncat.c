@@ -18,7 +18,7 @@ char *_strncat(char *dest, char *src, int n)
 	{
 		*(dest + s + i)	= *(src + i);
 		i++;
-		if (i == n)
+		if (i >= n)
 			break;
 	}
 
