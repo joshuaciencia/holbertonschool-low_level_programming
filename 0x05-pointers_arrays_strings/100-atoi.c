@@ -16,9 +16,7 @@ int _atoi(char *s)
 	}
 	for (i = 0; i < size; i++)
 	{
-		char c = s[i];
-
-		if (c >= 48 && c <= 57)
+		if (s[i] >= 48 && s[i] <= 57)
 		{
 			int pow = 1;
 
