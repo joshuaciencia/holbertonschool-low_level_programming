@@ -8,7 +8,7 @@ int _atoi(char *s)
 {
 	int size = 0, i, j, sign = 1;
 
-	int number = 0;
+	unsigned number = 0;
 
 	while (s[size] != 0)
 	{
@@ -18,7 +18,7 @@ int _atoi(char *s)
 	{
 		if (s[i] >= 48 && s[i] <= 57)
 		{
-			int pow = 1;
+			unsigned int pow = 1;
 
 			j = i;
 			while (s[j] >= 48 && s[j] <= 57)
