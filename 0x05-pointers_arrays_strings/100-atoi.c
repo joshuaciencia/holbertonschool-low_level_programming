@@ -34,7 +34,7 @@ int _atoi(char *s)
 			}
 			break;
 		}
-		else if (c == 45)
+		else if (s[i] == 45)
 			sign = -sign;
 	}
 	if (sign < 0)
