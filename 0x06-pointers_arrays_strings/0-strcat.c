@@ -19,6 +19,6 @@ char *_strcat(char *dest, char *src)
 		i++;
 	}
 
-	dest[s + i] = '\0';
+	dest[s + i] = 0;
 	return (dest);
 }

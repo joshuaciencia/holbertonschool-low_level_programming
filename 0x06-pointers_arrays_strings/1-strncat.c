@@ -1,11 +1,11 @@
 #include "holberton.h"
 /**
- * _strcat - concatenates two strings
+ * _strncat - concatenates two strings
  * @dest: dest string
  * @src: src string
  * Return: pointer to resulting string
  */
-char *_strcat(char *dest, char *src)
+char *_strncat(char *dest, char *src, int n)
 {
 	int s = 0, i = 0;
 
@@ -17,8 +17,10 @@ char *_strcat(char *dest, char *src)
 	{
 		*(dest + s + i)	= *(src + i);
 		i++;
+		if (i == n)
+			break;
 	}
 
-	*(src + i + s) = 0;
+	*(dest + s + i) = 0;
 	return (dest);
 }
