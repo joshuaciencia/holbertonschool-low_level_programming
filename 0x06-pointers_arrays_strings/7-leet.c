@@ -6,15 +6,12 @@
  */
 char *leet(char *s)
 {
-	int i = 0, j;
+	char low_up[5][2] = {{'a', 'A'}, {'e', 'E'}, {'o', 'O'},
+				 {'t', 'T'}, {'l', 'L'}};
 
-	char low_up[5][2] = {	{'a', 'A'},
-				{'e', 'E'},
-				{'o', 'O'},
-				{'t', 'T'},
-				{'l', 'L'}
-			};
-	int values[5] = {'4', '3', '0', '7', '1'};
+	char values[] = {'4', '3', '0', '7', '1'};
+
+	int i = 0, j;
 
 	while (s[i] != 0)
 	{
