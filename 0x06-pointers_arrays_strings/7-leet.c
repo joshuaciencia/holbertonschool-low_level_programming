@@ -8,11 +8,13 @@ char *leet(char *s)
 {
 	int i, j;
 
-	char lower[] = {'a', 'e', 'o', 't', 'l'};
-
-	char upper[] = {'A', 'E', 'O', 'T', 'L'};
-
-	char value[] = {'4', '3', '0', '7', '1'};
+	char low_up[][] = {	{'a', 'A'},
+				{'e', 'E'},
+				{'o', 'O'},
+				{'t', 'T'},
+				{'l', '1'}
+			};
+	int values[5] = {'4', '3', '0', '6', '1'};
 
 	while (s[i] != 0)
 	{
@@ -20,9 +22,10 @@ char *leet(char *s)
 
 		for (j = 0; j < 5; j++)
 		{
-			if (c == lower[j] || c == upper[j])
+			if (c == low_up[j][0] || c == low_up[j][1])
 			{
 				s[i] = value[j];
+				break;
 			}
 		}
 
