@@ -6,15 +6,15 @@
  */
 char *leet(char *s)
 {
-	int i, j;
+	int i = 0, j;
 
-	char low_up[][] = {	{'a', 'A'},
+	char low_up[5][2] = {	{'a', 'A'},
 				{'e', 'E'},
 				{'o', 'O'},
 				{'t', 'T'},
-				{'l', '1'}
+				{'l', 'L'}
 			};
-	int values[5] = {'4', '3', '0', '6', '1'};
+	int values[5] = {'4', '3', '0', '7', '1'};
 
 	while (s[i] != 0)
 	{
@@ -24,7 +24,7 @@ char *leet(char *s)
 		{
 			if (c == low_up[j][0] || c == low_up[j][1])
 			{
-				s[i] = value[j];
+				s[i] = values[j];
 				break;
 			}
 		}
