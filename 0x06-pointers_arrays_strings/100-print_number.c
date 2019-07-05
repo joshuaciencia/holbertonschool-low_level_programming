@@ -26,7 +26,7 @@ void print_number(int n)
 	for (i = 0; i < digits; i++)
 	{
 
-		unsigned int pow = 1;
+		int pow = 1;
 
 		int j;
 
