@@ -16,13 +16,14 @@ char *_strpbrk(char *s, char *b)
 		{
 			if (*s == *(b + i))
 			{
-				s++;
 				flag = 1;
 				break;
 			}
 		}
-		if (flag != 1)
+		if (flag != 0)
 			break;
+		else
+			s++;
 	}
 	return (s);
 }
