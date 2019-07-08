@@ -24,9 +24,5 @@ char *_strpbrk(char *s, char *b)
 		if (flag != 1)
 			break;
 	}
-	if (*s == 0)
-	{
-		return (0);
-	}
 	return (s);
 }
