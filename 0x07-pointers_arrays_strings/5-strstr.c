@@ -24,8 +24,11 @@ char *_strstr(char *s1, char *s2)
 				equality++;
 		}
 		if (equality == size)
-			break;
+		{
+			return (s1);
+		}
 		s1++;
 	}
-	return (s1);
+
+	return (0);
 }
