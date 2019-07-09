@@ -25,7 +25,7 @@ char *_strstr(char *s1, char *s2)
 		}
 		if (equality == size)
 			break;
-		s++;
+		s1++;
 	}
 	return (s1);
 }
