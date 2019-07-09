@@ -11,18 +11,13 @@ char *_strpbrk(char *s, char *b)
 
 	while (*s != 0)
 	{
-		int flag = 0;
-
 		for (i = 0; *(b + i) != 0; i++)
 		{
 			if (*s == *(b + i))
 			{
-				flag = 1;
-				break;
+				return (s);
 			}
 		}
-		if (flag != 0)
-			break;
 		s++;
 	}
 	return (s);
