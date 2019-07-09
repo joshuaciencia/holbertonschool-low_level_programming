@@ -12,6 +12,7 @@ char *_strpbrk(char *s, char *b)
 	while (*s != 0)
 	{
 		int flag = 0;
+
 		for (i = 0; *(b + i) != 0; i++)
 		{
 			if (*s == *(b + i))
@@ -22,8 +23,7 @@ char *_strpbrk(char *s, char *b)
 		}
 		if (flag != 0)
 			break;
-		else
-			s++;
+		s++;
 	}
 	return (s);
 }
