@@ -15,10 +15,10 @@ char *_strpbrk(char *s, char *b)
 		{
 			if (*s == *(b + i))
 			{
-				return (s - 1);
+				return (s);
 			}
 		}
 		s++;
 	}
-	return (s);
+	return (0);
 }
