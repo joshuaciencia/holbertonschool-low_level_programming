@@ -17,6 +17,7 @@ char *_strstr(char *s1, char *s2)
 	while (*s1 != 0)
 	{
 		unsigned int equality = 0;
+
 		for (i = 0; i < size; i++)
 		{
 			if (*(s1 + i) == *(s2 + i))
@@ -24,8 +25,7 @@ char *_strstr(char *s1, char *s2)
 		}
 		if (equality == size)
 			break;
-		else
-			s1++;
+		s++;
 	}
 	return (s1);
 }
