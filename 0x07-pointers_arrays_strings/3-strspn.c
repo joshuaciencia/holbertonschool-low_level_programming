@@ -7,11 +7,11 @@
  */
 unsigned int _strspn(char *s, char *pre)
 {
-	unsigned int len;
+	unsigned int len = 0;
 
 	unsigned int i;
 
-	while (*s != 0)
+	while (*(s + len) != 0)
 	{
 
 		int flag = 0;
@@ -22,10 +22,9 @@ unsigned int _strspn(char *s, char *pre)
 			{
 				len++;
 				flag = 1;
-				break;
 			}
 		}
-		if (flag != 1)
+		if (flag == 0)
 			break;
 	}
 	return (len);
