@@ -6,7 +6,7 @@
  */
 int is_prime_number(int n)
 {
-	return (_prime(n, 2));
+	return (_prime(n, 3));
 }
 /**
  * _prime - is prime
