@@ -6,7 +6,7 @@
  */
 int is_prime_number(int n)
 {
-	return (_prime(n, 3));
+	return (_prime(n, 2));
 }
 /**
  * _prime - is prime
@@ -16,14 +16,11 @@ int is_prime_number(int n)
  */
 int _prime(int n, int i)
 {
-	if (n < 0)
-		n = -n;
-
 	if (n < 2)
 		return (0);
 	else if (n == i)
 		return (1);
-	else if (n % i == 0)
+	else if (n % i == 0 || n <= 1)
 		return (0);
 
 	return (_prime(n, i + 1));
