@@ -1,7 +1,7 @@
 #include "holberton.h"
 /**
  * is_palindrome - is palindrome
- * @n: number
+ * @s: string
  * Return: 1 if palindrome, 0 otherwise
  */
 int is_palindrome(char *s)
@@ -9,7 +9,7 @@ int is_palindrome(char *s)
 	return (pali(s, s + _strlen_recursion(s) - 1));
 }
 /**
- * pale - is palindrome
+ * pali - is palindrome
  * @s: start of string
  * @e: end of string
  * Return: 1 if palindrome, 0 otherwise
