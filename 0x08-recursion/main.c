@@ -10,21 +10,21 @@ int main(void)
 {
     int r;
 
-    r = is_prime_number(1);
-    printf("%d\n", r);
-    r = is_prime_number(1024);
-    printf("%d\n", r);
-    r = is_prime_number(16);
-    printf("%d\n", r);
-    r = is_prime_number(17);
-    printf("%d\n", r);
-    r = is_prime_number(25);
-    printf("%d\n", r);
     r = is_prime_number(-1);
     printf("%d\n", r);
-    r = is_prime_number(113);
+    r = is_prime_number(0);
     printf("%d\n", r);
-    r = is_prime_number(7919);
+    r = is_prime_number(1);
+    printf("%d\n", r);
+    r = is_prime_number(2);
+    printf("%d\n", r);
+    r = is_prime_number(-2);
+    printf("%d\n", r);
+    r = is_prime_number(-17);
+    printf("%d\n", r);
+    r = is_prime_number(19);
+    printf("%d\n", r);
+    r = is_prime_number(4);
     printf("%d\n", r);
     return (0);
 }
