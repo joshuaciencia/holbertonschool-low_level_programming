@@ -10,21 +10,13 @@ int main(void)
 {
     int r;
 
-    r = is_prime_number(-1);
+    r = is_palindrome("level");
     printf("%d\n", r);
-    r = is_prime_number(0);
+    r = is_palindrome("redder");
     printf("%d\n", r);
-    r = is_prime_number(1);
+    r = is_palindrome("holberton");
     printf("%d\n", r);
-    r = is_prime_number(2);
-    printf("%d\n", r);
-    r = is_prime_number(-2);
-    printf("%d\n", r);
-    r = is_prime_number(-17);
-    printf("%d\n", r);
-    r = is_prime_number(19);
-    printf("%d\n", r);
-    r = is_prime_number(4);
+    r = is_palindrome("step on no pets");
     printf("%d\n", r);
     return (0);
 }

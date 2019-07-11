@@ -11,5 +11,6 @@ int _is_square(int n, int i);
 int is_prime_number(int n);
 int _prime(int n, int i);
 int is_palindrome(char *s);
+int pali(char *s, char *e);
 int wildcmp(char *s1, char *s2);
 #endif
