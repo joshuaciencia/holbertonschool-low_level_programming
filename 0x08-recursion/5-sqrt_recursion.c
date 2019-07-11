@@ -1,14 +1,28 @@
 #include "holberton.h"
 /**
+ * _is_square - natural square root of a number
+ * @x: number
+ * @i: auxiliar variable
+ * Return: natural square root
+ */
+int _is_square(int x, int i)
+{
+
+	int sqr = i * i;
+
+	if (sqr == x)
+		return (i);
+	else if (sqr > x)
+		return (-1);
+
+	return (is_square(x, i + 1));
+}
+/**
  * _sqrt_recursion - natural square root of a number
  * @n: number
  * Return: natural square root
  */
 int _sqrt_recursion(int n)
 {
-
-	if (n - 1 == 0)
-		return (0);
-	http://www.math.com/school/subject1/lessons/S1U1L9DP.html
-	_sqrt_recursion(n / (n - 1))
+	return (is_square(n, 1));
 }
