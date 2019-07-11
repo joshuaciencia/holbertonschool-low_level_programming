@@ -19,7 +19,7 @@ int _prime(int n, int i)
 	if (n < 0)
 		n = -n;
 
-	if (n == 1 || n == 0)
+	if (n < 2)
 		return (0);
 	else if (n == i)
 		return (1);
