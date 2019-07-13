@@ -90,6 +90,8 @@ int only_nums(char *s)
 		}
 		c++;
 	}
+	if (c == 0)
+		return (0);
 	return (1);
 }
 /**
