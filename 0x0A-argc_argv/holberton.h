@@ -1,0 +1,6 @@
+#ifndef HOLBERTON
+#define HOLBERTON
+int _putchar(char c);
+int convert_to_integer(char *s);
+int _atoi(char *s);
+#endif
