@@ -1,8 +1,10 @@
 #include "holberton.h"
 #include <stdio.h>
 /**
- * main - print all arguments
- * Return: 0 if multiplied 1 if not enough args
+ * main - add two numbers
+ * Return: 0
+ * @argc: amount of args
+ * @argv: pointer to pointers array
  */
 int main(int argc, char *argv[])
 {

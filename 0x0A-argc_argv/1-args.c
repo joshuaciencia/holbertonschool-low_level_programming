@@ -1,8 +1,10 @@
 #include "holberton.h"
 #include <stdio.h>
 /**
- * main - number of arguments
+ * main - print number of args
  * Return: 0
+ * @argc: amount of args
+ * @argv: pointer to pointers array
  */
 int main(int argc, char *argv[])
 {
@@ -17,5 +19,5 @@ int main(int argc, char *argv[])
 
 	printf("%d\n", n - 1);
 
-        return (0);
+	return (0);
 }
