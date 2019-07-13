@@ -38,10 +38,8 @@ int _atoi(char *s)
 
 	int number = 0;
 
-	while (s[size] != 0)
-	{
-		size++;
-	}
+	size = _strlen_recursion(s);
+
 	for (i = 0; i < size; i++)
 	{
 		if (s[i] >= 48 && s[i] <= 57)
