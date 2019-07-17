@@ -10,7 +10,7 @@
  */
 void print_tab(char **tab)
 {
-    int i;
+        int i;
 
     for (i = 0; tab[i] != NULL; ++i)
     {
@@ -27,7 +27,8 @@ int main(void)
 {
     char **tab;
 
-    tab = strtow("      Holberton School         #cisfun      ");
+    tab = strtow("            ");
+
     if (tab == NULL)
     {
         printf("Failed\n");
