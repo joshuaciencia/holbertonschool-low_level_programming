@@ -42,6 +42,7 @@ char **strtow(char *str)
 		}
 		i++;
 	}
+	s[words] = NULL;
 	return (s);
 }
 /**
