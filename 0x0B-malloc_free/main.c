@@ -38,9 +38,10 @@ int main(void)
 {
     int **grid;
 
-    grid = alloc_grid(6, 4);
+    grid = alloc_grid(10, 0);
     if (grid == NULL)
     {
+	printf("Nulito\n");
         return (1);
     }
     print_grid(grid, 6, 4);
