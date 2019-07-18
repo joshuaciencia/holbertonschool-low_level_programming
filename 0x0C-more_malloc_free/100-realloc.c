@@ -34,15 +34,15 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	}
 	if (new_size < old_size)
 	{
-		char *pp;
+		int *pp;
 
-		pp = ((char *)ptr);
+		pp = ((int *)ptr);
 		free(pp + new_size);
 	}
 	p = malloc(max_size);
 	if (p == NULL)
 		return (NULL);
 	for (i = 0; i < min_size; i++)
-		((char *)p)[i] = ((char *)p)[i];
+		((int *)p)[i] = ((int *)p)[i];
 	return (p);
 }
