@@ -38,13 +38,17 @@ void simple_print_buffer(char *buffer, unsigned int size)
  */
 int main(void)
 {
-    char *a;
+    char *p;
+    int i;
 
-    a = _calloc(98, sizeof(char));
-    strcpy(a, "Holberton");
-    strcpy(a + 9, " School! :)\n");
-    a[97] = '!';
-    simple_print_buffer(a, 98);
-    free(a);
+    p = malloc(sizeof(char) * 10);
+    p = _realloc(p, sizeof(char) * 10, sizeof(char) * 98);
+    i = 0;
+    while (i < 98)
+    {
+        p[i++] = 98;
+    }
+    simple_print_buffer(p, 98);
+    free(p);
     return (0);
 }
