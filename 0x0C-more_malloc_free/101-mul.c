@@ -67,7 +67,10 @@ int _atoi(char *s)
 
 	int number = 0;
 
-	size = _strlen_recursion(s);
+	while (s[size] != 0)
+	{
+		size++;
+	}
 
 	for (i = 0; i < size; i++)
 	{
@@ -111,23 +114,13 @@ void print_string(char s[])
 		c++;
 	}
 }
-
+/**
+ * print_int - prints integer
+ * @n: integer to print
+ */
 void print_int(unsigned int n)
 {
 	if (n / 10)
 		print_int(n / 10);
 	_putchar(n % 10 + '0');
-}
-/**
- * _strlen_recursion - return the length of a string
- * @s: string
- * Return: length of str
- */
-int _strlen_recursion(char *s)
-{
-
-	if (*s == 0)
-		return (0);
-
-	return (1 + _strlen_recursion(s + 1));
 }
