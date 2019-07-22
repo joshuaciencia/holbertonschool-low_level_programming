@@ -13,22 +13,23 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	char *n, *o;
 
-	int len_name = 0, len_owner = 0, i;
+	int len_name = _strlen(name), len_owner = _strlen(owner), i;
 
-	while (name[len_name])
-		len_name++;
-	n = malloc(sizeof(char) * (len_name));
+	pt = malloc(sizeof(dog_t));
+	if (!pt)
+		return (0);
+	n = malloc(sizeof(char) * (len_name + 1));
 	if (!n)
 	{
-		free(name);
+		free(n);
+		free(pt);
 		return (0);
 	}
-	while (owner[len_owner])
-		len_owner++;
-	o = malloc(sizeof(char) * (len_owner));
+	o = malloc(sizeof(char) * (len_owner + 1));
 	if (!o)
 	{
-		free(owner);
+		free(pt);
+		free(o);
 		free(n);
 		return (0);
 	}
@@ -38,17 +39,22 @@ dog_t *new_dog(char *name, float age, char *owner)
 	for (i = 0; i < len_owner; i++)
 		o[i] = owner[i];
 	o[i] = '\0';
-	pt = malloc(sizeof(dog_t));
-	if (!pt)
-	{
-		free(name);
-		free(owner);
-		free(n);
-		free(o);
-		return (0);
-	}
 	pt->name = n;
 	pt->age = age;
 	pt->owner = o;
 	return (pt);
+}
+
+/**
+ * _strlen - len of string
+ * Return: length of string
+ * @s: string
+ */
+int _strlen(char *s)
+{
+	int counter = 0;
+
+	while (s[counter] != 0)
+		counter++;
+	return (counter);
 }
