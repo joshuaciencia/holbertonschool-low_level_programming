@@ -1,5 +1,5 @@
-#ifndef CHESS
-#define CHESS
+#ifndef DOG
+#define DOG
 int _putchar(char c);
 /**
  * struct dog - dog struct
