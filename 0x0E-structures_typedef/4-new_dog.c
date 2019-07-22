@@ -20,12 +20,12 @@ dog_t *new_dog(char *name, float age, char *owner)
 	while (name[len_name])
 		len_name++;
 
-	n = malloc(sizeof(char) * (len_name + 1));
+	n = malloc(sizeof(char) * (len_name));
 	if (!n)
 		return (0);
 	while (owner[len_owner])
 		len_owner++;
-	o = malloc(sizeof(char) * (len_owner + 1));
+	o = malloc(sizeof(char) * (len_owner));
 	if (!o)
 		return (0);
 	for (i = 0; i < len_name; i++)
