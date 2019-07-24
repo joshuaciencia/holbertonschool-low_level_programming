@@ -10,7 +10,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int o1, o2, i;
+	int o1, o2, i, j, k;
 
 	op_t oper;
 
@@ -21,8 +21,10 @@ int main(int argc, char *argv[])
 	}
 
 	i = strlen(argv[2]);
+	j = strlen(argv[1]);
+	k = strlen(argv[3]);
 
-	if (i > 1)
+	if (i > 1 || j > 1 || k > 1)
 	{
 		printf("Error\n");
 		exit(98);
