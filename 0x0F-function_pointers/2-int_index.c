@@ -4,14 +4,14 @@
  * int_index - searches for an integer
  * @array: array pointer
  * @size: size of the array
- * @action: pointer to func to compare values
+ * @cmp: func to search a number
  * Return: void
  */
 int int_index(int *array, int size, int (*cmp)(int))
 {
 	int i;
 
-	if (size <= 0)
+	if (size <= 0 || !cmp || !array)
 		return (-1);
 
 	for (i = 0; i < size; i++)
