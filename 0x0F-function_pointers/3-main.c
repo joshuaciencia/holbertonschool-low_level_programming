@@ -10,7 +10,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int o1, o2;
+	int o1, o2, i;
 
 	op_t oper;
 
@@ -20,6 +20,13 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 
+	i = strlen(argv[2]);
+
+	if (i > 1)
+	{
+		printf("Error\n");
+		exit(99);
+	}
 	o1 = atoi(argv[1]);
 	o2 = atoi(argv[3]);
 	oper.op = argv[2];
