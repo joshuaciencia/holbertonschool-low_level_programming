@@ -19,7 +19,7 @@ int op_add(int a, int b)
  */
 int op_sub(int a, int b)
 {
-	return (abs(a - b));
+	return (a - b);
 }
 /**
  * op_mul - returns the product of a & b
