@@ -22,9 +22,9 @@ int main(int argc, char *argv[])
 
 	i = strlen(argv[2]);
 
-	if (strcmp(argv[2], "+") != 0 
-		&& strcmp(argv[2], "-") != 0 
-		&& strcmp(argv[2], "*") != 0 
+	if (strcmp(argv[2], "+") != 0
+		&& strcmp(argv[2], "-") != 0
+		&& strcmp(argv[2], "*") != 0
 		&& strcmp(argv[2], "/") != 0
 		&& strcmp(argv[2], "%") != 0)
 	{
