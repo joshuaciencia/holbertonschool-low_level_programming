@@ -22,6 +22,16 @@ int main(int argc, char *argv[])
 
 	i = strlen(argv[2]);
 
+	if (strcmp(argv[2], "+") != 0 
+		&& strcmp(argv[2], "-") != 0 
+		&& strcmp(argv[2], "*") != 0 
+		&& strcmp(argv[2], "/") != 0
+		&& strcmp(argv[2], "%") != 0)
+	{
+		printf("Error\n");
+		exit(99);
+	}
+
 	if (i > 1)
 	{
 		printf("Error\n");
