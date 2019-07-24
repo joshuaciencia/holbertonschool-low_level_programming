@@ -10,7 +10,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int o1, o2;
+	int o1, o2, i = 0;
 
 	op_t oper;
 
@@ -19,9 +19,18 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(98);
 	}
+
+	while (argv[2][i] != '\0')
+		i++;
+	
+	if (i > 1)
+	{
+		printf("Error\n");
+		exit(98);
+	}
+
 	o1 = atoi(argv[1]);
 	o2 = atoi(argv[3]);
-
 	oper.op = argv[2];
 	oper.f = get_op_func(argv[2]);
 	printf("%d\n", oper.f(o1, o2));
