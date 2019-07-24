@@ -17,8 +17,7 @@ int (*get_op_func(char *s))(int, int)
 *s == '%' ? op_mod : NULL;
 	if (!ptr_fun)
 	{
-		printf("Error\n");
-		exit(99);
+		return (NULL);
 	}
 	return (ptr_fun);
 }

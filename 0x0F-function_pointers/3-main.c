@@ -19,6 +19,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(98);
 	}
+
 	o1 = atoi(argv[1]);
 	o2 = atoi(argv[3]);
 	oper.op = argv[2];
