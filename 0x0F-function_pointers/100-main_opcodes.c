@@ -9,6 +9,8 @@
  */
 int main(int argc, char *argv[])
 {
+	int (* ptr)(int, char **);
+
 	if (argc != 2)
 	{
 		printf("Error\n");
@@ -19,5 +21,12 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(2);
 	}
+
+	unsigned int * p = (unsigned int *)main;
+
+	ptr = main;
+	
+	printf("%p\n %x\n", *ptr, *p);
+	
 	return (0);
 }
