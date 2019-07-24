@@ -18,7 +18,7 @@ int (*get_op_func(char *s))(int, int)
 	if (!ptr_fun)
 	{
 		printf("Error\n");
-		return (NULL);
+		exit(99);
 	}
 	return (ptr_fun);
 }
