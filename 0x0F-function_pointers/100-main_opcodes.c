@@ -9,7 +9,11 @@
  */
 int main(int argc, char *argv[])
 {
-	int (* ptr)(int, char **);
+	unsigned char *p = (unsigned char *)main;
+
+	unsigned int bytes;
+
+	int i;
 
 	if (argc != 2)
 	{
@@ -22,11 +26,10 @@ int main(int argc, char *argv[])
 		exit(2);
 	}
 
-	unsigned int * p = (unsigned int *)main;
+	bytes = atoi(argv[1]);
 
-	ptr = main;
-	
-	printf("%p\n %x\n", *ptr, *p);
-	
+	for (i = 0; i < bytes; i++)
+		printf("%02x ", *p++);
+	printf("\n");
 	return (0);
 }
