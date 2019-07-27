@@ -37,10 +37,11 @@ void print_all(const char * const format, ...)
 				break;
 		}
 		j = i + 1;
-		while (format[j] && (format[j] == 'c' || format[j] == 'i' || format[j] == 'f' || format[j] == 's'))
+		while (format[j] && (format[j] == 'c' ||
+			 format[j] == 'i' || format[j] == 'f' || format[j] == 's'))
 		{
-			if (i != 0)
-				printf(", ");
+			
+			printf(", ");
 			break;
 		}
 		i++;
