@@ -37,23 +37,12 @@ void print_all(const char * const format, ...)
 				break;
 		}
 		j = i + 1;
-		while (format[j] && isAval(format[j]))
+		while (format[j] && (format[j] == 'c' || format[j] == 'i' || format[j] == 'f' || format[j] == 's'))
 		{
-			printf(", ");
+			if (i != 0)
+				printf(", ");
 			break;
 		}
 		i++;
-	}
-	printf("\n");
-}
-/**
- * isAval - checks if c is available
- * @c: char
- * Return: 1 if succes 0 otherwise
- */
-int isAval(char c)
-{
-	if (c == 'c' || c == 'i' || c == 'f' || c == 's')
-		return (1);
-	return (0);
+	} printf("\n");
 }
