@@ -40,7 +40,6 @@ void print_all(const char * const format, ...)
 		while (format[j] && (format[j] == 'c' ||
 			 format[j] == 'i' || format[j] == 'f' || format[j] == 's'))
 		{
-			
 			printf(", ");
 			break;
 		}
