@@ -35,13 +35,16 @@ void print_all(const char * const format, ...)
 				}
 				printf("(nil)");
 				break;
-		}
-		j = i + 1;
-		while (format[j] && (format[j] == 'c' ||
-			 format[j] == 'i' || format[j] == 'f' || format[j] == 's'))
+		} j = i + 1;
+		while (format[j] && (format[i] == 'c' ||
+			 format[i] == 'i' || format[i] == 'f' || format[i] == 's'))
 		{
-			printf(", ");
-			break;
+			if (format[j] == 'c' || format[j] == 'i' ||
+			 format[j] == 's' || format[i] == 'f')
+			{
+				printf(", ");
+				break;
+			} j++;
 		}
 		i++;
 	} printf("\n");
