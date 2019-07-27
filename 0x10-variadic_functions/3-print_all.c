@@ -37,7 +37,7 @@ void print_all(const char * const format, ...)
 				break;
 		}
 		j = i + 1;
-		while (format[j] && isAval(format[j]) && i != 0)
+		while (format[j] && isAval(format[j]))
 		{
 			printf(", ");
 			break;
