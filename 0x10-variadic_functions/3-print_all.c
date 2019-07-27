@@ -10,14 +10,13 @@
 void print_all(const char * const format, ...)
 {
 	va_list list;
-	unsigned int i = 0, j = 0, f;
+	unsigned int i = 0, j = 0;
+	char *s;
 
 	va_start(list, format);
-	while (format[i])
+	while (format[i] && format)
 	{
-		char *s;
-
-		switch (format && format[i])
+		switch (format[i])
 		{
 			case 'c':
 				printf("%c", va_arg(list, int));
@@ -37,18 +36,15 @@ void print_all(const char * const format, ...)
 				}
 				printf("(nil)");
 				break;
-			default:
-				break;
 		}
-
 		j = i + 1;
-
-		while (format[j])
+		while (format[j] && (format[j]
+				== 'c' || format[j] == 'i'
+				|| format[j] == 'f' || format[j] == 's'))
 		{
-			
+			printf(", ");
+			break;
 		}
-
-		printf(", ");
 		i++;
 	}
 	printf("\n");
