@@ -9,7 +9,6 @@
 section .data
 
 	message db "Hello, Holberton", nl
-	message_len equ $-message
 
 section .text
 
