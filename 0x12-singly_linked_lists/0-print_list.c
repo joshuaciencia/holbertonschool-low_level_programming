@@ -7,8 +7,10 @@
  */
 size_t print_list(const list_t *h)
 {
-	size_t nodes = 0;
-	const list_t *next_l = h;
+	unsigned int nodes = 0;
+	const list_t *next_l;
+
+	next_l = h;
 
 	while (next_l)
 	{
