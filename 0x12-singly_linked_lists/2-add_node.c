@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <string.h>
 #include "lists.h"
 /**
  * add_node - add new node to list
@@ -8,8 +9,10 @@
  */
 list_t *add_node(list_t **head, const char *str)
 {
-	char *string = strdup(str);
+	char *string;
 	list_t *node;
+
+	string = strdup(str);
 
 	if (!string)
 		return (0);
