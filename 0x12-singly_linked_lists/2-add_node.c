@@ -10,7 +10,7 @@
 list_t *add_node(list_t **head, const char *str)
 {
 	char *string = strdup(str);
-	list_t *node;	
+	list_t *node;
 
 	if (!string)
 		return (0);
@@ -22,19 +22,4 @@ list_t *add_node(list_t **head, const char *str)
 	node->next = (*head);
 	(*head) = node;
 	return (node);
-}
-/**
- * _strlen - Swaps integers wih pointers.
- * @s: is a pointer to a char
- * Return: Always 0.
- */
-int _strlen(char *s)
-{
-	int i = 0;
-
-	while (*(s + i) != '\0')
-	{
-		i++;
-	}
-	return (i);
 }
