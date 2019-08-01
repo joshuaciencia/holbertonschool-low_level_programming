@@ -23,4 +23,5 @@ list_t *add_node_end(list_t **head, const char *str);
 void free_list(list_t *head);
 int _strlen(char *s);
 list_t *get_last(list_t **head);
+list_t *get_last_node(list_t *head);
 #endif

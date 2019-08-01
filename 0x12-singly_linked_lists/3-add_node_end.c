@@ -30,7 +30,11 @@ list_t *add_node_end(list_t **head, const char *str)
 
 	return (node);
 }
-
+/**
+ * get_last - get last node of LL
+ * Return: address of last element
+ * @head: head node
+ */
 list_t *get_last(list_t **head)
 {
 	list_t *last = *head;
