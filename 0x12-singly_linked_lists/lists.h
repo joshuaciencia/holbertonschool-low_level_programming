@@ -1,5 +1,5 @@
-#ifndef LIST
-#define LIST
+#ifndef HOLBERTON
+#define HOLBERTON
 /**
  * struct list_s - singly linked list
  * @str: string - (malloc'ed string)
