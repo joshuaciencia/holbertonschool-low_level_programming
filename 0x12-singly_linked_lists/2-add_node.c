@@ -12,7 +12,7 @@ list_t *add_node(list_t **head, const char *str)
 	char *string;
 	list_t *node;
 
-	if (!head)
+	if (!head || !str)
 		return (0);
 
 	string = strdup(str);
