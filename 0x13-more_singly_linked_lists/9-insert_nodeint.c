@@ -9,8 +9,7 @@
  */
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
-	unsigned int i = 0;
-	listint_t *node;
+	listint_t *node, *prev;
 
 	if (!*head)
 		return (0);
@@ -18,16 +17,34 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	if (!node)
 		return (0);
 	node->n = n;
-	while (*head)
-	{
-		if (i == idx - 1)
-		{
-			node->next = (*head)->next;
-			(*head)->next = node;
-			break;
-		}
-		*head = (*head)->next;
-		i++;
-	}
+
+	prev = get_nodeint_at_index(*head, idx - 1);
+
+	if (!prev)
+		return (0);
+	node->next = prev->next;
+	prev->next = node;
 	return (node);
+}
+/**
+ * get_nodeint_at_index - get node at index
+ * @head: head node
+ * @index: index node
+ * Return: address of index node
+ */
+listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
+{
+	unsigned int i = 0;
+
+	if (!head)
+		return (0);
+
+	while (head)
+	{
+		if (index == i)
+			return (head);
+		i++;
+		head = head->next;
+	}
+	return (0);
 }
