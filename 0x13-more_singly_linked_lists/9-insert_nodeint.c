@@ -11,7 +11,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
 	listint_t *node, *prev;
 
-	if (!*head || !head)
+	if (!head)
 		return (0);
 
 	if (idx == 0)
