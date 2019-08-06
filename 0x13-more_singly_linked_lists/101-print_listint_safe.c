@@ -16,7 +16,6 @@ size_t print_listint_safe(const listint_t *head)
 
 	while (head)
 	{
-		printf("[%p] %d\n", (void *)head, head->n);
 		for (i = 0; i < size; i++)
 		{
 			if (tmp[i] == head)
