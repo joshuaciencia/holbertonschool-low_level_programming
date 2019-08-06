@@ -8,34 +8,24 @@
  */
 size_t print_listint_safe(const listint_t *head)
 {
-	int size = 0;
-	const listint_t first;
+	int size = 0, i, iterator = 1;
+	const listint_t *tmp[100];
 
-	while (head && &first != head)
+	while (head && iterator)
 	{
-		printf("%p %d\n", (void *)head, head->n);
-		size++;wqwqw
-		head = head->next;q
+		tmp[size] = head;
+		size++;
+		printf("[%p] %d\n", (void *)head, head->n);
+		for (i = 0; i < size; i++)
+		{
+			if (tmp[i] == head->next)
+			{
+				iterator = 0;
+				printf("-> [%p] %d\n", (void *)head->next, head->next->n);
+				break;
+			}
+		}
+		head = head->next;
 	}
 	return (size);
-}
-/**
- * _printd - print any number
- * Return: void
- * @n: number
- */
-void _printd(int n)
-{
-	unsigned int n1;
-
-	if (n < 0)
-	{
-		_putchar('-');
-		n1 = -n;
-	}
-	else
-		n1 = n;
-	if (n1 / 10)
-		_printd(n1 / 10);
-	_putchar(n1 % 10 + '0');
 }
