@@ -8,17 +8,16 @@
  */
 int main(void)
 {
-    unsigned int n;
+    unsigned long int n;
 
-    n = binary_to_uint(0);
-    printf("%u\n", n);
-    n = binary_to_uint("101");
-    printf("%u\n", n);
-    n = binary_to_uint("1e01");
-    printf("%u\n", n);
-    n = binary_to_uint("1100010");
-    printf("%u\n", n);
-    n = binary_to_uint("0000000000000000000110010010");
-    printf("%u\n", n);
+    n = 1024;
+    clear_bit(&n, 10);
+    printf("%lu\n", n);
+    n = 0;
+    clear_bit(&n, 10);
+    printf("%lu\n", n);
+    n = 98;
+    clear_bit(&n, 1);
+    printf("%lu\n", n);
     return (0);
 }
