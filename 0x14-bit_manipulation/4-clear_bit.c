@@ -16,7 +16,7 @@ int clear_bit(unsigned long int *n, unsigned int index)
 	copy = get_bit(copy, index);
 
 	if (copy == 0x0)
-		return (-1);
+		return (1);
 	*n = (*n) - power(2, index);
 	return (1);
 }
