@@ -14,7 +14,7 @@ unsigned int binary_to_uint(const char *b)
 	dec = 0;
 	exp = size - 1;
 
-	if (!b)
+	if (!b || size > 64)
 		return (0);
 
 	while (b[i])
