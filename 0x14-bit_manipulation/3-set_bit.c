@@ -9,6 +9,9 @@ int set_bit(unsigned long int *n, unsigned int index)
 {
 	unsigned int copy;
 
+	if (index > 64)
+		return (-1);
+
 	copy = *n;
 	copy = get_bit(copy, index);
 
