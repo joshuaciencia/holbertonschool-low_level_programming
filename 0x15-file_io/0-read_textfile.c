@@ -1,5 +1,5 @@
-#include <stdio.h>
 #include <unistd.h>
+#include <fcntl.h>
 #include "holberton.h"
 
 /**
@@ -10,30 +10,21 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	FILE *file;
-	unsigned int count = 0;
-	int ch;
+	int fd;
+	char buff[1000];
+	ssize_t bytes;
 
 	if (!filename)
 		return (0);
-
-	file = fopen(filename, "r");
-
-	if (!file)
+	fd = open(filename, O_RDONLY);
+	if (fd == -1)
 		return (0);
 
-	while ((ch = fgetc(file)) != EOF)
-	{
-		int r;
+	bytes = read(fd, buff, letters);
+	if (bytes == -1)
+		return (0);
 
-		if (count > letters)
-			break;
-		r = write(1, &ch, sizeof(char));
-		if (r == -1)
-			return (0);
-		count++;
-	}
+	write(1, buff, bytes);
 
-	fclose(file);
-	return (count);
+	return (bytes);
 }
