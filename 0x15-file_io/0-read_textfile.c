@@ -1,5 +1,5 @@
 #include <unistd.h>
-#include <stdlib>
+#include <stdlib.h>
 #include <fcntl.h>
 #include "holberton.h"
 
@@ -45,7 +45,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (r == -1)
 	{
 		close(fd);
-		free(fd);
+		free(buff);
 		return (0);
 	}
 	close(fd);
