@@ -3,6 +3,10 @@
 #include <stdlib.h>
 #include <fcntl.h>
 #include "holberton.h"
+
+#define READ_ERR "Error: Can't read from file %s\n"
+#define WRITE_ERR "Error: Can't write to %s\n"
+
 /**
  * main - check the code for Holberton School students.
  * @argc: num of args
@@ -12,42 +16,34 @@
 int main(int argc, char **argv)
 {
 	int from, to, on_close, w, r;
-	char *buffer;
+	char buffer[1024];
 
 	if (argc != 3)
-	{
-		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
-		exit(97);
-	}
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
 	to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
+	if (to == -1)
+		dprintf(STDERR_FILENO, WRITE_ERR, argv[2]), exit(99);
 	from = open(argv[1], O_RDONLY);
 	if (from == -1)
+		dprintf(STDERR_FILENO, READ_ERR, argv[1]), exit(98);
+	while (1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-		exit(98);
-	}
-	buffer = malloc(sizeof(char) * 1024);
-	r = read(from, buffer, 1024);
-	w = write(to, buffer, r);
-	if (w == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-		free(buffer);
-		exit(99);
+		r = read(from, buffer, 1024);
+		if (r == -1)
+			dprintf(STDERR_FILENO, READ_ERR, argv[1]), exit(98);
+		if (r > 0)
+		{
+			w = write(to, buffer, r);
+			if (w == -1)
+				dprintf(STDERR_FILENO, WRITE_ERR, argv[2]), exit(99);
+		} else
+			break;
 	}
 	on_close = close(from);
 	if (on_close == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", from);
-		free(buffer);
-		exit(100);
-	}
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", from), exit(100);
 	on_close = close(to);
 	if (on_close == -1)
-	{
-		free(buffer);
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", to);
-		exit(100);
-	}
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", to), exit(100);
 	return (0);
 }
