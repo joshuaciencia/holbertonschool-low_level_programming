@@ -3,7 +3,7 @@
 /**
  * add_dnodeint - add not at the beginning
  * Return: pointer to node
- * @h: list
+ * @head: head node
  * @n: data
  */
 dlistint_t *add_dnodeint(dlistint_t **head, const int n)
