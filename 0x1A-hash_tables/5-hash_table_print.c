@@ -21,10 +21,14 @@ void hash_table_print(const hash_table_t *ht)
 
 		if (node)
 		{
-			if (idx != 0)
-				printf(", ");
-			printf("'%s': '%s'", node->key, node->value);
-			idx++;
+			while (node)
+			{
+				if (idx != 0)
+					printf(", ");
+				printf("'%s': '%s'", node->key, node->value);
+				node = node->next;
+				idx++;
+			}
 		}
 	}
 	printf("}\n");
