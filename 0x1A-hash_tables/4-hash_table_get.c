@@ -21,5 +21,13 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	if (!node)
 		return (0);
 	else
-		return (node->value);
+	{
+		while (node)
+		{
+			if (!strcmp(node->key, key))
+				return (node->value);
+			node = node->next;
+		}
+	}
+	return (0);
 }
