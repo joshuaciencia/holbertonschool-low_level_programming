@@ -1,5 +1,5 @@
 #include "sort.h"
-
+#include <stdio.h>
 
 void insertion_sort_list(listint_t **list)
 {
@@ -12,20 +12,24 @@ void insertion_sort_list(listint_t **list)
 		while (rev->prev && rev->prev->n > rev->n)
 		{
 			/* swap nodes */
-			listint_t *prev = rev->prev->prev;
 			listint_t *next = rev->next;
-
-			rev->next = rev->prev;
-			rev->prev->prev = rev;
+			listint_t *left = rev->prev;
+			listint_t *prev = left->prev;
+			
+			rev->next = left;
+			rev->prev = prev;
 
 			if (prev)
 				prev->next = rev;
-			if (next)
-				next->prev = rev->prev;
 
-			rev->prev->next = next;
-			rev->prev = prev;
-			rev = rev->prev;
+			left->next = next;
+			left->prev = rev;
+
+			if (next)
+				next->prev = left;
+
+			if (!rev->prev)
+				*list = rev;
 			print_list(*list);
 		}
 		curr = curr->next;
