@@ -1,6 +1,5 @@
 #include "sort.h"
 
-
 /**
  * insertion_sort_list - sorts ddl
  * @list: head node of ddl
@@ -10,7 +9,7 @@ void insertion_sort_list(listint_t **list)
 {
 	listint_t *curr = *list;
 
-	if (*list && !*list->next)
+	if (*list && !(*list)->next)
 		return;
 
 	while (curr)
