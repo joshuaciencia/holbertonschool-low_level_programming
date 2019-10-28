@@ -1,4 +1,5 @@
 #include "sort.h"
+#include <stdio.h>
 
 /**
  * insertion_sort_list - sorts ddl
@@ -7,14 +8,13 @@
  */
 void insertion_sort_list(listint_t **list)
 {
-	listint_t *curr = *list;
+	listint_t *curr;
 
 	if (!list)
 		return;
-
 	if (*list && !(*list)->next)
 		return;
-
+	curr = *list;
 	while (curr)
 	{
 		listint_t *rev = curr;
