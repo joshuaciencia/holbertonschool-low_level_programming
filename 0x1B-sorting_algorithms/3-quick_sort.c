@@ -54,7 +54,8 @@ int partition(int *arr, int low, int hi, size_t s)
 			arr[i] = arr[j];
 			arr[j] = tmp;
 			i++;
-			print_array(arr, s);
+			if (i - 1 != j)
+				print_array(arr, s);
 		}
 	}
 
