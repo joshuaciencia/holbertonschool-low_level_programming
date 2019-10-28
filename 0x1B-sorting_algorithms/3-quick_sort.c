@@ -8,7 +8,7 @@
  */
 void quick_sort(int *array, size_t size)
 {
-	if (size < 2)
+	if (size < 2 || !array)
 		return;
 
 	quick_sort_recursive(array, 0, size - 1, size);
