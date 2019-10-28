@@ -1,9 +1,17 @@
 #include "sort.h"
-#include <stdio.h>
 
+
+/**
+ * insertion_sort_list - sorts ddl
+ * @list: head node of ddl
+ * Return: void
+ */
 void insertion_sort_list(listint_t **list)
 {
 	listint_t *curr = *list;
+
+	if (*list && !*list->next)
+		return;
 
 	while (curr)
 	{
@@ -15,7 +23,7 @@ void insertion_sort_list(listint_t **list)
 			listint_t *next = rev->next;
 			listint_t *left = rev->prev;
 			listint_t *prev = left->prev;
-			
+
 			rev->next = left;
 			rev->prev = prev;
 

@@ -1,10 +1,18 @@
 #include "sort.h"
 
-
+/**
+ * bubble_sort - sorts array with bs algorith
+ * @size: size of hash table
+ * @array: array of ints
+ * Return: void
+ */
 void bubble_sort(int *array, size_t size)
 {
 	int swapped = 1;
 	unsigned int i;
+
+	if (size < 2)
+		return;
 
 	while (swapped)
 	{
