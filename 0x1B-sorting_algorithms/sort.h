@@ -1,7 +1,6 @@
 #ifndef _HOLBERTON
 #define _HOLBERTON
-
-#include <stdlib.h>
+#include <stddef.h>
 
 /**
  * struct listint_s - Doubly linked list node
