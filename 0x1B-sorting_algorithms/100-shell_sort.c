@@ -8,29 +8,31 @@
  */
 void shell_sort(int *arr, size_t size)
 {
-	int i, j, z;
-	int gaps[] = {701, 301, 132, 57, 23, 10, 4, 1};
+	int i, j;
+	int gap = 1;
 
 	if (!arr || size < 2)
 		return;
+	while (gap < (int)size / 3)
+		gap = gap * 3 + 1;
 
-	for (z = 0; z < 8; z++)
+	while (gap >= 1)
 	{
-		int gap = gaps[z];
-		int flag = 0;
+		/*int flag = 0;*/
 
 		for (i = gap; i < (int)size; i++)
 		{
+			/*flag = 1;*/
 			for (j = i; j >= gap && arr[j] < arr[j - gap]; j -= gap)
 			{
 				int tmp = arr[j];
 
 				arr[j] = arr[j - gap];
 				arr[j - gap] = tmp;
-				flag = 1;
 			}
 		}
-		if (flag)
-			print_array(arr, size);
+		print_array(arr, size);
+
+		gap = gap / 3;
 	}
 }
