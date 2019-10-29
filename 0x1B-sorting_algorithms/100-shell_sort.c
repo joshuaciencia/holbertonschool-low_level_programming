@@ -21,13 +21,13 @@ void shell_sort(int *arr, size_t size)
 
 		for (i = gap; i < (int)size; i++)
 		{
-			flag = 1;
 			for (j = i; j >= gap && arr[j] < arr[j - gap]; j -= gap)
 			{
 				int tmp = arr[j];
 
 				arr[j] = arr[j - gap];
 				arr[j - gap] = tmp;
+				flag = 1;
 			}
 		}
 		if (flag)
