@@ -12,6 +12,8 @@ void counting_sort(int *arr, size_t size)
 	int *count;
 	int i, k = 0, total = 0;
 
+	if (!arr || size < 2)
+		return;
 	for (i = 0; i < (int)size; i++)
 		if (arr[i] > k)
 			k = arr[i];
@@ -36,4 +38,5 @@ void counting_sort(int *arr, size_t size)
 			arr[total++] = i;
 		}
 	}
+	free(count);
 }
