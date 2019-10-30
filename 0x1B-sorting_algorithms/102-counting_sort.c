@@ -1,5 +1,4 @@
 #include "sort.h"
-#include <stdlib.h>
 
 /**
  * counting_sort - sorts array with counting algo
@@ -22,7 +21,6 @@ void counting_sort(int *arr, size_t size)
 		return;
 	for (i = 0; i < (int)size; i++)
 		count[arr[i]] += 1;
-
 	for (i = 0; i < k + 1; i++)
 	{
 		if (count[i])
@@ -34,9 +32,7 @@ void counting_sort(int *arr, size_t size)
 	for (i = 0; i < k + 1; i++)
 	{
 		if (count[i] != total)
-		{
 			arr[total++] = i;
-		}
 	}
 	free(count);
 }
