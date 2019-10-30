@@ -29,7 +29,10 @@ void quick_sort_recursive(int *arr, int low, int hi, size_t s);
 int partition(int *arr, int low, int hi, size_t s);
 
 void shell_sort(int *array, size_t size);
+
 void cocktail_sort_list(listint_t **list);
+void swap_nodes(listint_t *curr, listint_t **list, int fordward);
+
 void counting_sort(int *array, size_t size);
 void merge_sort(int *array, size_t size);
 void heap_sort(int *array, size_t size);
