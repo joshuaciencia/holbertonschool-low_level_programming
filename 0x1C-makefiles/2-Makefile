@@ -3,7 +3,5 @@ OBJ=main.o holberton.o
 SRC=main.c holberton.c
 NAME=holberton
 
-all: recompile
-
-recompile: $(OBJ)
+all: $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
