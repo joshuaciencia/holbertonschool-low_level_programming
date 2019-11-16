@@ -3,6 +3,7 @@
 Module that contains island perimeter fun
 """
 
+
 def island_perimeter(grid):
     """ returns the perimeter of the function
     """
@@ -19,4 +20,3 @@ def island_perimeter(grid):
                 if not grid[r + 1][c]:
                     per += 1
     return per
-                    
