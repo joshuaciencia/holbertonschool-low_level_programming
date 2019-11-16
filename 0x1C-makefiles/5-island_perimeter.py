@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+!/usr/bin/python3
 """
 Module for island_perimeter
 """
@@ -32,5 +32,5 @@ def island_perimeter(grid):
                     if not grid[r + 1][c]:
                         per += 1
                 except IndexError:
-                    pass 
+                    pass
     return per
