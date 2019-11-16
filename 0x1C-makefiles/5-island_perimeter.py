@@ -1,6 +1,12 @@
 #!/usr/bin/python3
+"""
+Module for island_perimeter
+"""
+
+
 def island_perimeter(grid):
-    """ returns the perimeter of the function
+    """
+    returns the perimeter of the function
     """
     if not len(grid):
         return 0
