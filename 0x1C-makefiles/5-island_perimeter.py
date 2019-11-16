@@ -1,9 +1,4 @@
 #!/usr/bin/python3
-"""
-Module that contains island perimeter fun
-"""
-
-
 def island_perimeter(grid):
     """ returns the perimeter of the function
     """
