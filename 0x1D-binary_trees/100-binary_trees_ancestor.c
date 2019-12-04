@@ -12,6 +12,9 @@ binary_tree_t *binary_trees_ancestor(const binary_tree_t *first, const binary_tr
 	const binary_tree_t *tmp;
 	int i = 0, j = 0;
 
+	if (!first || !second)
+		return (0);
+
 	path_first = malloc(sizeof(binary_tree_t *) * 32);
 	if (!path_first)
 		return (0);
