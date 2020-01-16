@@ -20,9 +20,9 @@ int exponential_search(int *array, size_t size, int value)
 		printf("Value checked array[%d] = [%d]\n", i, array[i]);
 		i *= 2;
 	}
-	right = i >= (int)size ? (int)size - 1: i;
+	right = i >= (int)size ? (int)size - 1 : i;
 	printf("Value found between indexes [%d] and [%d]\n", i / 2, right);
-	return (binary_search_ranges(array, value, i / 2, i - 1));
+	return (binary_search_ranges(array, value, i / 2, right));
 }
 /**
  * binary_search_ranges - search value using binary search algo.
