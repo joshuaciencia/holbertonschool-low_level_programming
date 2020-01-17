@@ -11,10 +11,12 @@ int advanced_binary(int *array, size_t size, int value)
 {
 	int left = 0;
 	int right = size - 1;
+	int ocurrence = -1;
 
 	if (!array)
 		return (-1);
-	return (binary_recursion(array, left, right, value));
+	binary_recursion(array, left, right, value, &ocurrence);
+	return (ocurrence);
 }
 /**
  * binary_recursion - search value using bunary search algo.
@@ -24,13 +26,13 @@ int advanced_binary(int *array, size_t size, int value)
  * @value: value to be retrieve
  * Return: first index where value is located
  */
-int binary_recursion(int *array, int left, int right, int value)
+void binary_recursion(int *array, int left, int right, int value, int *ocur)
 {
 	int half;
 	int i;
 
 	if (left > right)
-		return (-1);
+		return;
 
 	half = (left + right) / 2;
 	printf("Searching in array: ");
@@ -42,13 +44,13 @@ int binary_recursion(int *array, int left, int right, int value)
 		else
 			printf("\n");
 	}
-	if (array[half] < value)
-		return (binary_recursion(array, half + 1, right, value));
-	else if (array[half] > value)
-		return (binary_recursion(array, left, half - 1, value));
-	else if (half > 0 && array[half - 1] != value)
-		return (half);
+	if (array[half] == value)
+	{
+		*ocur = half;
+		binary_recursion(array, left, half - 1, value, ocur);
+	}
+	else if (array[half] < value)
+		binary_recursion(array, half + 1, right, value, ocur);
 	else
-		return (binary_recursion(array, left, half, value));
-
+		binary_recursion(array, left, half - 1, value, ocur);
 }
