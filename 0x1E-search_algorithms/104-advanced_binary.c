@@ -29,7 +29,7 @@ int binary_recursion(int *array, int left, int right, int value)
 	int half;
 	int i;
 
-	if (left >= right)
+	if (left > right)
 		return (-1);
 
 	half = (left + right) / 2;
@@ -46,7 +46,7 @@ int binary_recursion(int *array, int left, int right, int value)
 		return (binary_recursion(array, half + 1, right, value));
 	else if (array[half] > value)
 		return (binary_recursion(array, left, half - 1, value));
-	else if (array[half - 1] != value)
+	else if (half > 0 && array[half - 1] != value)
 		return (half);
 	else
 		return (binary_recursion(array, left, half, value));
